@@ -1,5 +1,5 @@
-# Use official Node.js image as base
-FROM node:14-alpine
+# Use official Node.js LTS image as base
+FROM node:lts-alpine
 
 # Set working directory inside the container
 WORKDIR /app
@@ -17,7 +17,7 @@ COPY . .
 # Build the Next.js application
 RUN npm run build
 
-# Expose the port Next.js is running on
+# Expose the port Next.js is running on (if applicable)
 EXPOSE 3000
 
 # Command to run the application
